@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+.logo {
+    font-family: "Alice", serif;
+    background: linear-gradient(to right, #ff00cc, #0099F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.activeNav:hover {
+    background: linear-gradient(to right, #ff00cc, #0099F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom CSS for underline animation */
+.activeNav {
+    position: relative;
+    display: inline-block;
+}
+
+.activeNav::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #ff00cc, #0099F7);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.activeNav:hover::after {
+    visibility: visible;
+    width: 100%;
+}
